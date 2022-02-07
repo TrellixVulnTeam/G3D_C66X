@@ -1,0 +1,243 @@
+$fontColor:#A65C1C;
+$backroundColor:black;
+@mixin colores {
+    color: $fontColor;
+    background-color: $backroundColor;
+    text-align: center;
+
+}
+body header img {
+    width: 350px; ;
+}
+    
+*{
+          margin: 0;
+          padding: 0;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      html{
+          color: $fontColor;
+          
+      }
+      main{
+          background-color: $backroundColor;
+      }
+      /*INDEX*/
+      /*header*/
+      header {
+          background-color:$backroundColor;
+          width :auto;
+          text-align :center;
+      }
+      header #main-nav {
+          text-align: center;
+          color: $fontColor;
+          list-style: none;
+          text-decoration: none;
+          width: auto;
+          margin-top: -5rem;
+      }
+      
+      .nav-link:hover {
+          text-decoration: underline;
+          color:$backroundColor;
+      } 
+      
+      /*main*/
+      #main{
+          height: 90%vh;
+      }
+      
+      
+      h2{
+          text-align: center;
+          color:$fontColor;
+      }
+      .mensaje-bienvenido{
+          text-align: center;
+          color:$fontColor;
+          font-size: 1.5rem;
+      }
+      
+      .promocion {
+          text-align: center;
+          color:$fontColor;
+          font-weight: 900;
+          font-size: 1.2rem;
+          
+      }
+      
+      .cuidados{
+          font-size: 1.5rem;
+          text-align: center;
+          color:$fontColor;
+          
+      }
+      
+      
+      /*footer*/
+      
+      #footer{
+          background-color:$backroundColor;
+          height: 100px;
+          width: auto;
+          border: solid 2px #FFF;
+          text-align: right;
+      }
+      
+      #footer{
+          align-items: flex-end;
+          
+        
+      
+      }
+      
+      #footer li{
+          list-style: none;
+          list-style-type: none;
+          display: inline-block;
+      }
+      footer ul {
+          height: 80px;
+      }
+      
+      
+      /*consultas*/
+      
+      .consultas{
+        height: 550px
+      }
+      .form {
+         @include colores;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 9% 9% 52% 10% 10% 10%;
+        grid-template-areas: "nombre"
+                              "email"
+                              "escritura"
+                              ;
+        justify-items: center;
+        align-items: center;
+        height: 450px;
+        
+      }
+      .nombre{
+       
+        width: 180px;
+      }
+      .email{
+        
+        width: 180px;
+      }
+      .areadetexto{
+      
+        width: 250px;
+        
+      }
+      .boton{
+        width: 90px
+      }
+
+      
+      #main-consultas input{
+        @include colores;
+      }
+      #main-consultas textarea{
+        @include colores;
+      }
+      
+      
+      
+      
+      /*envios*/
+      
+      .main{
+          color: $fontColor;
+          justify-content: center;
+          height: 150px;
+      }
+      .main p{
+          text-align: center;
+          font-size: 20px;
+          size: 10rem;
+      }
+      
+      /*sobrenosotros*/
+      .main-nosotros{
+          color: $fontColor;
+          justify-content: center;
+          height: 300px;
+      
+      }
+      .main-nosotros p{
+          text-align: center;
+          font-size: 20px;
+          size: 20rem;
+      
+      }
+      @media only screen and (max-width: 600px) {
+        header {
+          display: flex;
+          flex-direction: column;
+          width: 100%; }
+      
+        header img {
+          padding-bottom: 50px; }
+        #main-nav ul {
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          align-items: center; }
+        .main-nosotros {
+          height: 450px; }
+        .main {
+          height: 350px; }
+        .nav-link {
+          font-size: 30px; }
+        /*footer*/
+        #footer {
+          text-align: right;
+        }
+        .logo-sociales {  
+          width: 8rem; 
+        } 
+        }
+      
+      @media only screen and (max-width: 480px) {
+        header {
+          display: flex;
+          flex-direction: column;
+          width: 100%; }
+          body header img{
+            width: 250px;
+          }
+        header img {
+          padding-bottom: 50px; 
+        }
+        #main-nav ul {
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          align-items: center; 
+        }
+        .main-nosotros {
+          height: 550px; 
+        }
+        /*envios*/
+        .main {
+          height: 450px; 
+        }
+        .nav-link {
+          font-size: 1rem; }
+        /*footer*/
+        #footer {
+          text-align: right;
+
+        }
+        .logo-sociales {
+          
+          width: 6rem; 
+        } 
+        }
+      
+   
